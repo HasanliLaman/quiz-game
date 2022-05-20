@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="game__mode">
+      <div>
+        <p>Choose difficulty level:</p>
+        <button class="easy">Easy</button>
+        <button class="medium">Medium</button>
+        <button class="hard">Hard</button>
+      </div>
+    </section>
+    <section class="game__result hidden">
+      <div>
+        <p>Score:</p>
+        <span>0</span>
+      </div>
+    </section>
+    <main>
+      <section class="game__details container">
+        <div class="game__detail">
+          <p>Question <span class="question__number">1</span>/10</p>
+          <div class="question__bar">
+            <span class="question--done"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="game__detail">
+          <p>Score</p>
+          <div class="game__score">0</div>
+        </div>
+      </section>
+      <section class="game__questions container">
+        <p class="game__question">Loading...</p>
+        <div class="game__options">
+          <div>Loading...</div>
+          <div>Loading...</div>
+          <div>Loading...</div>
+          <div>Loading...</div>
+        </div>
+      </section>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>

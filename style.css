@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4rem;
+}
+
+main {
+  min-height: 100vh;
+  background: #edf5ff;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  padding: 3rem 0;
+  position: relative;
+}
+
+/* Game details */
+
+.game__detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.game__detail p {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.question__bar {
+  border: 2px solid #ff99dd;
+  width: 180px;
+  height: 35px;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+}
+
+.question--done {
+  background: rgb(255, 153, 221);
+}
+
+.game__score {
+  color: #ff99dd;
+  font-weight: 600;
+  font-size: 5rem;
+  line-height: 3rem;
+}
+
+.game__details {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Game questions */
+.game__questions {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-self: center;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.game__options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.game__question {
+  font-weight: 600;
+  font-size: 1.5rem;
+  align-self: center;
+  text-align: center;
+}
+
+.game__options > div,
+.game__mode button {
+  border: 1.3px solid #fde8f8;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 0.8rem;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.5s;
+}
+
+.game__options > div:hover,
+.game__mode button:hover {
+  background-color: rgb(253, 232, 248);
+}
+
+.container {
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* Game mode */
+.game__mode,
+.game__result {
+  position: fixed;
+  z-index: 5;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game__mode > div,
+.game__result > div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+  background: #fff;
+  padding: 4rem 3rem;
+  border-radius: 5px;
+  width: 500px;
+}
+
+.game__mode p {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.game__mode button {
+  background: #edf5ff;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  .game__mode > div,
+  .game__result > div {
+    width: 300px;
+  }
+}
+
+@media (max-width: 300px) {
+  .game__mode > div,
+  .game__result > div {
+    width: 250px;
+  }
+}
+
+/* Game reslt */
+.game__result {
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+
+.game__result span {
+  color: #ff99dd;
+  font-size: 12rem;
+  line-height: 9.5rem;
+}
