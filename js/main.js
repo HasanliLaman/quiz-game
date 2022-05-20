@@ -40,8 +40,6 @@ const checkQuestions = function (questions, options) {
       el.style.background = "red";
 
       uiOptions.forEach((el) => {
-        console.log(el.innerHTML);
-        console.log(options[index][0]);
         if (el.innerHTML == options[index][0]) {
           el.style.background = "green";
         }
