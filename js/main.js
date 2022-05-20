@@ -40,6 +40,8 @@ const checkQuestions = function (questions, options) {
       el.style.background = "red";
 
       uiOptions.forEach((el) => {
+        console.log(el.innerHTML);
+        console.log(options[index][0]);
         if (el.innerHTML == options[index][0]) {
           el.style.background = "green";
         }
@@ -69,7 +71,11 @@ const getData = async function (difficulty) {
   const data = await res.json();
 
   const options = data.results.map((el) => {
-    return [el.correct_answer, ...el.incorrect_answers];
+    const correct = el.correct_answer
+      .replace("&#039;", "'")
+      .replace("&ouml;", "ö")
+      .replace("&oacute", "ó");
+    return [correct, ...el.incorrect_answers];
   });
 
   const questions = data.results.map((el) => el.question);
